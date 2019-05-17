@@ -10,7 +10,7 @@ Project is responsible for manipulating bouncy numbers.
 <br>
 
 
-## Índice
+## Summary
 
 - [Introduction](#introduction)
 - [Stack](#stack)
@@ -20,7 +20,7 @@ Project is responsible for manipulating bouncy numbers.
 
 ## Introduction
 
-Bouncy Numbers
+Project created to find the first bouncy number that starts 99% chance of finding a number of this feature.
 
 ## Stack
 
