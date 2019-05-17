@@ -14,89 +14,71 @@ Project is responsible for manipulating bouncy numbers.
 
 - [Introduction](#introduction)
 - [Stack](#stack)
-- [Requisitos](#requisitos)
-- [Instalação](#instalação)
-- [Estrutura do projeto](#estrutura-do-projeto)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Architecture](#architecture)
 
 ## Introduction
 
-Fortes API é uma interface de extração de dados do sistema Fortes AG do IEPRO.
-O produto foi criado a partir da necessidade dos desenvolvedores
-de integrar os sistemas do IEPRO com e possam focar nas demais funcionalidades
-que sejam solicitadas!
+Bouncy Numbers
 
 ## Stack
 
-A stack foi escolhida com base no que empresas grandes estão usando para construir suas experiências.
-Também foi levado em consideração a simplicidade, curva de aprendizado e requisitos
-como fácil distribuição e entrega rápida.
+The stack was chosen based on what big companies are using to build their experiences.
+Also taken into account was the simplicity, learning curve, easy distribution and quick delivery.
 
-Tendo isso em vista, optamos por usar [Python 3](https://www.python.org/).
+We chose to use [Python 3](https://www.python.org/). <3
 
-## Requisitos
+## Requirements
 
-Este repositório é um monorepo que aloja os pacotes que compõem a Fortes API.
-Para instalar as dependências é necessário usar o [pip](https://pypi.org/project/pip/).
+This repository is a monorepo that hosts the packages that make up Bouncy Numbers.
+To install the dependencies it is necessary to use the [pip](https://pypi.org/project/pip/).
 
-## Instalação
+## Setup
 
-Algumas instruções para desenvolver na Fortes API:
+Some instructions for developing Bouncy Numbers:
 
-1. **Clonando o repositório**
-
-	```sh
-	$ git clone git@github.com:ieprodev/fortesapi.git
-	```
-
-2. **Rodando o servidor**
-
-	Entre na pasta principal do projeto:
+1. **Cloning**
 
 	```sh
-	$ cd fortesapi
+	$ git clone git@github.com:LeviMacario/bouncy_numbers.git
 	```
 
-    Crie o ambiente virtual
+2. **Run**
+
+	Enter the main project folder:
+
+	```sh
+	$ cd bouncy_numbers
+	```
+
+    Create the virtual environment (Using Virtualenv Wrapper):
     ```sh
-    $ mkvirtualenv -p python3 fortesapi
+    $ mkvirtualenv -p python3 bouncy_numbers
     ```
 
-    Acesse o ambiente virtual
+    Access the virtual environment (Using Virtualenv Wrapper):
     ```sh
-    $ workon fortesapi
+    $ workon bouncy_numbers
     ```
 
-	Use o pip para instalar as dependências:
+	Use the pip to install the requirements:
 
 	```sh
 	$ pip install -r requirements.txt
 	```
 
-    Crie uma cópia de .flaskenv.example para .flaskenv (Esse arquivo é necessário para carregar as variáveis de ambiente):
+	Run the application:
 
 	```sh
-	$ cp .flaskenv.example .flaskenv
+	$ python bouncy_numbers.py
 	```
 
-	Inicie a aplicação (em ambiente de desenvolvimento):
+## Architecture
 
-	```sh
-	$ make runpublic
-	```
-
-## Estrutura do projeto
-
-- **`fortesapi`**: Toda a estrutura de arquivos e pastas do projeto.
-    - **`database`**: Contém a estrutura de arquivos e pastas relacionadas ao banco de dados.
-        - **`constants.py`**: Variáveis globais que armazenem as strings com os códigos SQL.
-        - **`sqlserver.py`**: Classe para se conectar ao banco e realizar as consultas necessárias.
-    - **`views`**: Todas as views que são utilizadas para os endpoints da API.
-        - **`bank_accounts.py`**: Views responsáveis pelos favorecidos.
-        - **`favored.py`**: Views responsáveis pelas contas.
-    - **`fortesapi.py`**: Arquivo principal para instanciação da app central.
-    - **`.gitignore`**: Arquivo responsável pelas exceções do repositório git.
-    - **`requirements.txt`**: Arquivo que guarda todas as dependências do projeto.
-    - **`README.md`**: Arquivo que possui as instruções para uso do projeto.
-    - **`Makefile`**: Arquivo que possui tasks automatizadas do projeto.
-    - **`.flaskenv.example`**: Arquivo que possui as variáveis de ambiente de desenvolvimento do projeto.
+- **`bouncy_numbers`**: Structure of project files and folders.
+    - **`bouncy_numbers.py`**: Main file of the app.
+    - **`.gitignore`**: File responsible for git repository exceptions.
+    - **`requirements.txt`**: File that saves all project dependencies.
+    - **`README.md`**: File that has instructions for use of the project.
     

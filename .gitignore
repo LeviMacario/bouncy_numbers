@@ -1,0 +1,30 @@
+syntax: glob
+.idea/
+*.sqlite
+*.sqlite3
+*.pyc
+*.swp
+*.env
+*.swo
+*.db
+*.log
+*.xls
+*.py~
+*.html~
+*.css~
+*.orig
+*.DS_Store
+.vscode/*
+media/*
+media/uploads/*
+bouncy_numbers/media/*
+staticfiles/*
+staticfiles
+local_settings.py
+cache/*
+logs/*
+.vscode
+
+# switch to regexp syntax.
+syntax: regexp
+^media/img/mkt_base.\d+.*
